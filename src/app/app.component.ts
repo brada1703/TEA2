@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocalizeRouterService } from 'localize-router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  loadedFeature = 'pronunciation';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
+  constructor(private localize: LocalizeRouterService) {}
+  changeLanguage(lang: string) {
+    this.localize.changeLanguage(lang);
+  }
 }

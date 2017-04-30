@@ -1,0 +1,21 @@
+h4 {
+    font-size: calc(8px + .5vw);
+}
+.list-group-item {
+    padding: 0.25rem 0.5rem;
+    border: 0px;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}

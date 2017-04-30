@@ -1,0 +1,15 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="'/' | localize">Home</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar' | localize">{{ 'NAVBAR.Grammar' | translate }}</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar/adjectives' | localize">{{ 'GRAMMAR.Adjectives' | translate }}</a></li>
+  <li class="breadcrumb-item active">{{ 'GRAMMAR.Placement' | translate }}</li>
+</ol>
+<h1>{{ 'GRAMMAR.Placement' | translate }}</h1>
+<p>Unlike most romance languages, adjectives are usually placed before the noun they modify in English.</p>
+<p>Examples:</p>
+<ul>
+    <li>He has a <strong>green shirt</strong>.</li>
+    <li>We went to some <strong>lovely beaches</strong>.</li>
+    <li>She likes to drink <strong>Italian Spritz</strong>.</li>
+    <li>They ran in the <strong>Boston Marathon</strong>.</li>
+</ul>

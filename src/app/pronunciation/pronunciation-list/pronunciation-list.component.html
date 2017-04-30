@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <input type="text" [(ngModel)]="userFilter.name" placeholder="Search for word" style="width: 100%;">
+    <hr>
+    <app-pronunciation-item
+      *ngFor="let wordEl of words | filterBy: userFilter"
+      [pronunciation]="wordEl"
+      (wordSelected)="onPronunciationSelected(wordEl)">
+      </app-pronunciation-item>
+  </div>
+</div>

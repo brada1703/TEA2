@@ -1,0 +1,18 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+  <li class="breadcrumb-item"><a routerLink="/pronunciation">Pronunciation</a></li>
+  <li class="breadcrumb-item active">{{ pronunciation.name }}</li>
+</ol>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <iframe width="560" height="315" [src]="pronunciation.videoPath | youtube" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h5>{{ pronunciation.name }}</h5>
+    <p>Phonetics: {{ pronunciation.phonetics }}</p>
+    <p>Definition: {{ pronunciation.definition }}</p>
+  </div>
+</div>
+

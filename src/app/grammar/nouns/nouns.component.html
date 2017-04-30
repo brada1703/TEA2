@@ -1,0 +1,21 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="'/' | localize">Home</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar' | localize">{{ 'NAVBAR.Grammar' | translate }}</a></li>
+  <li class="breadcrumb-item active">{{ 'GRAMMAR.Nouns' | translate }}</li>
+</ol>
+<h1 style="padding-bottom: 10px;" class="text-center">{{ 'GRAMMAR.Nouns' | translate }}</h1>
+<p><strong> Nouns </strong> are words used to identify people, places, things, or ideas. They tell us what we are talking about.</p>
+<p>Using nouns correctly in English is relatively simple, with standard rules and only a few exceptions. Use these pages to learn about the English grammar rules for gender, plurals, countable and uncountable nouns, compound nouns, capitalization, nationalities, and forming the possessive.</p>
+<div style="margin: auto;">
+  <ul>
+    <li><a [routerLink]="'/grammar/gender' | localize">Gender Specific Nouns</a></li>
+    <li><a [routerLink]="'/grammar/plural' | localize">Singular &amp; Plural Nouns</a></li>
+    <li><a [routerLink]="'/grammar/countable' | localize">Countable &amp; Uncountable Nouns</a></li>
+    <li><a [routerLink]="'/grammar/pronouns' | localize">Definite &amp; Indefinite Pronouns</a></li>
+    <li><a [routerLink]="'/grammar/compound' | localize">Compound Nouns</a></li>
+    <li><a [routerLink]="'/grammar/capitalization' | localize">Capitalization Rules</a></li>
+    <li><a [routerLink]="'/grammar/nationalities' | localize">Nationalities</a></li>
+    <li><a [routerLink]="'/grammar/possessives' | localize">Possessives</a></li>
+  </ul>
+</div>
+

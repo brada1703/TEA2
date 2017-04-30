@@ -1,0 +1,16 @@
+<h1 class="text-center" style="font-size: calc(18px + 1vw); margin-top: 5px; margin-bottom: 5px;">{{ 'PRONUNCIATION.GuidePronunciation' | translate }}</h1>
+<hr>
+<div class="row">
+  <div class="col-md-3">
+    <app-pronunciation-list
+      (wordWasSelected)="selectedPronunciation = $event"></app-pronunciation-list>
+  </div>
+  <div class="col-md-9">
+    <app-pronunciation-detail
+      *ngIf="selectedPronunciation; else infoText"
+      [pronunciation]="selectedPronunciation"></app-pronunciation-detail>
+    <ng-template #infoText>
+      <p>Welcome to the Guide to English Pronunciation</p>
+    </ng-template>
+  </div>
+</div>

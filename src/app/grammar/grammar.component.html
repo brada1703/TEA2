@@ -1,0 +1,119 @@
+<h1 class="text-center" style="font-size: calc(18px + 1vw); margin-top: 5px; margin-bottom: 5px;">{{ 'GRAMMAR.GuideGrammar' | translate }}</h1>
+<hr>
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle collapsed" style="border-color: #ddd; float: left;" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false" (click)="isCollapsed = !isCollapsed">
+        Grammar Navigation
+    </button>
+</div>
+<div class="row">
+    <div class="col-lg-3 collapse navbar-collapse" style="min-width: 280px;" id="bs-example-navbar-collapse-2" (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed">
+        <accordion [closeOthers]="oneAtATime">
+            <accordion-group heading="{{ 'GRAMMAR.GrammarHome' | translate }}" [routerLink]="'/grammar' | localize" [isDisabled]="status.isFirstDisabled">
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Nouns' | translate }}">
+                <a [routerLink]="'nouns' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'gender' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Gender' | translate }} </h4></div></a>
+                <a [routerLink]="'plural' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Plural' | translate }} </h4></div></a>
+                <a [routerLink]="'countable' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Countable' | translate }} </h4></div></a>
+                <a [routerLink]="'pronouns' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Pronouns' | translate }} </h4></div></a>
+                <a [routerLink]="'compound' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Compound' | translate }} </h4></div></a>
+                <a [routerLink]="'capitalization' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Capitalization' | translate }} </h4></div></a>
+                <a [routerLink]="'nationalities' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Nationalities' | translate }} </h4></div></a>
+                <a [routerLink]="'possessives' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Possessives' | translate }} </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Adjectives' | translate }}">
+                <a [routerLink]="'adjectives' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'comparativesuperlative' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.ComparativesSuperlatives' | translate }} </h4></div></a>
+                <a [routerLink]="'compareattributes' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.CompareAttributes' | translate }} </h4></div></a>
+                <a [routerLink]="'equalquantities' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.EqualQuantities' | translate }} </h4></div></a>
+                <a [routerLink]="'unequalquantities' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.UnequalQuantities' | translate }} </h4></div></a>
+                <a [routerLink]="'placement' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Placement' | translate }} </h4></div></a>
+                <a [routerLink]="'order' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Order' | translate }} </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Adverbs' | translate }}">
+                <a [routerLink]="'adverbs' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'fromadjectives' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.FromAdjectives' | translate }} </h4></div></a>
+                <a [routerLink]="'place' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Place' | translate }} </h4></div></a>
+                <a [routerLink]="'time' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Time' | translate }} </h4></div></a>
+                <a [routerLink]="'degree' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Degree' | translate }} </h4></div></a>
+                <a [routerLink]="'certainty' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Certainty' | translate }} </h4></div></a>
+                <a [routerLink]="'viewpointandcommentingadverbs' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.ViewpointandCommenting' | translate }} </h4></div></a>
+                <a [routerLink]="'relative' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Relative' | translate }} </h4></div></a>
+                <a [routerLink]="'interrogative' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Interrogative' | translate }} </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Determiners' | translate }}">
+                <a [routerLink]="'determiners' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'definitearticles' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Definite Articles </h4></div></a>
+                <a [routerLink]="'indefinitearticles' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Indefinite Articles </h4></div></a>
+                <a [routerLink]="'demonstratives' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Demonstratives </h4></div></a>
+                <a [routerLink]="'pronounsandpossessivedeterminers' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Pronouns and Possessives </h4></div></a>
+                <a [routerLink]="'quantifiers' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Quantifiers </h4></div></a>
+                <a [routerLink]="'numbers' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Numbers </h4></div></a>
+                <a [routerLink]="'distributives' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Distributives </h4></div></a>
+                <a [routerLink]="'differencewords' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Difference Words </h4></div></a>
+                <a [routerLink]="'predeterminers' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Predeterminers </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Verbs' | translate }}">
+                <a [routerLink]="'verbs' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'present' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Present </h4></div></a>
+                <a [routerLink]="'simplepresent' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Simple Present </h4></div></a>
+                <a [routerLink]="'presentcontinuous' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Present Continuous </h4></div></a>
+                <a [routerLink]="'past' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Past </h4></div></a>
+                <a [routerLink]="'simplepast' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Simple Past </h4></div></a>
+                <a [routerLink]="'pastcontinuous' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Past Continuous </h4></div></a>
+                <a [routerLink]="'perfect' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Perfect </h4></div></a>
+                <a [routerLink]="'presentperfect' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Present Perfect </h4></div></a>
+                <a [routerLink]="'presentperfectcontinuous' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Present Perfect Continuous </h4></div></a>
+                <a [routerLink]="'futureperfect' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Future Perfect </h4></div></a>
+                <a [routerLink]="'futureperfectcontinuous' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Future Perfect Continuous </h4></div></a>
+                <a [routerLink]="'future' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Future </h4></div></a>
+                <a [routerLink]="'simplefuture' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Simple Future </h4></div></a>
+                <a [routerLink]="'futurecontinuous' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Future Continuous </h4></div></a>
+                <a [routerLink]="'conditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Conditional </h4></div></a>
+                <a [routerLink]="'zeroconditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Zero Conditional </h4></div></a>
+                <a [routerLink]="'type1conditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Type 1 Conditional </h4></div></a>
+                <a [routerLink]="'type2conditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Type 2 Conditional </h4></div></a>
+                <a [routerLink]="'type3conditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Type 3 Conditional </h4></div></a>
+                <a [routerLink]="'mixedconditional' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Mixed Conditional </h4></div></a>
+                <a [routerLink]="'ingforms' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> -Ing Forms </h4></div></a>
+                <a [routerLink]="'gerund' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Gerund </h4></div></a>
+                <a [routerLink]="'presentparticiple' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Present Participle </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Speech' | translate }}">
+                <a [routerLink]="'speech' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'directandindirect' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Direct and Indirect </h4></div></a>
+                <a [routerLink]="'verbtenses' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Verb Tenses </h4></div></a>
+                <a [routerLink]="'timeandplacereferences' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Time and Place References </h4></div></a>
+                <a [routerLink]="'reportingquestions' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Reporting Questions </h4></div></a>
+                <a [routerLink]="'verbsusedtoreportspeech' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Verbs Used to Report Speech </h4></div></a>
+                <a [routerLink]="'reportorderrequestsandsuggestions' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Orders, Requests, and Suggestions </h4></div></a>
+                <a [routerLink]="'reporthopesrequestsandpromises' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Hopes, Requests, and Promises </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Punctuation' | translate }}">
+                <a [routerLink]="'punctuation' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'period' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Period </h4></div></a>
+                <a [routerLink]="'comma' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Comma </h4></div></a>
+                <a [routerLink]="'exclamationmark' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Exclamation Mark </h4></div></a>
+                <a [routerLink]="'colon' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Colon </h4></div></a>
+                <a [routerLink]="'semicolon' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Semicolon </h4></div></a>
+                <a [routerLink]="'questionmark' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Question Mark </h4></div></a>
+                <a [routerLink]="'apostrophe' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Apostrophe </h4></div></a>
+                <a [routerLink]="'hyphenanddash' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Hyphen and Dash </h4></div></a>
+                <a [routerLink]="'parenthesesandbrackets' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Parentheses and Brackets </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.Prepositions' | translate }}">
+                <a [routerLink]="'prepositions' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'commonprepositions' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Common Prepositions </h4></div></a>
+                <a [routerLink]="'phrasalverbs' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Phrasal Verbs </h4></div></a>
+            </accordion-group>
+            <accordion-group heading="{{ 'GRAMMAR.RelativeClauses' | translate }}">
+                <a [routerLink]="'relativeclauses' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> {{ 'GRAMMAR.Overview' | translate }} </h4></div></a>
+                <a [routerLink]="'definingclauses' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Defining Clauses </h4></div></a>
+                <a [routerLink]="'nondefiningclauses' | localize" class="list-group-item clearfix" style="cursor: pointer;"><div class="pull-left"><h4> Non-defining Clauses </h4></div></a>
+            </accordion-group>
+        </accordion>
+    </div>
+    <div class="col-md-12 col-lg-9">
+        <router-outlet></router-outlet>
+    </div>
+</div>

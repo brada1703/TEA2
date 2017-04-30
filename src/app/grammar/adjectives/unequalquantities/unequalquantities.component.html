@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="'/' | localize">Home</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar' | localize">{{ 'NAVBAR.Grammar' | translate }}</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar/adjectives' | localize">{{ 'GRAMMAR.Adjectives' | translate }}</a></li>
+  <li class="breadcrumb-item active">{{ 'GRAMMAR.UnequalQuantities' | translate }}</li>
+</ol>
+<h1>{{ 'GRAMMAR.UnequalQuantities' | translate }}</h1>
+<p>When comparing two unequal things, we should use the following structure:</p>
+<p><strong>adjective indicating quantity + noun + than</strong></p>
+<p>Note that adjective used here may depend on whether the noun is countable or uncountable. If the noun is countable, then we should use <i>more</i> or <i>fewer</i>. Whereas, if the noun in uncountable, we should use <i>more</i> or <i>less</i>.</p>
+<p>Examples:</p>
+<ul>
+    <li>I have <strong>more water than</strong> he does. - <i>"water" is an uncountable noun</i></li>
+    <li>I have <strong>more bottles than</strong> he does. - <i>"bottles" is a countable noun</i></li>
+    <li>San Francisco has <strong>less traffic than</strong> New York City. - <i>"traffic" is an uncountable noun</i></li>
+    <li>San Francisco has <strong>fewer cars than</strong> New York City.- <i>"cars" is a countable noun</i></li>
+</ul>

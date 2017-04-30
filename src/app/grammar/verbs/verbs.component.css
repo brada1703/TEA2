@@ -1,0 +1,6 @@
+h4 {
+    font-size: calc(8px + .5vw);
+}
+.list-group-item {
+    padding: 0.25rem 0.5rem;
+}

@@ -1,0 +1,64 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="'/' | localize">Home</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar' | localize">{{ 'NAVBAR.Grammar' | translate }}</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar/adjectives' | localize">{{ 'GRAMMAR.Adjectives' | translate }}</a></li>
+  <li class="breadcrumb-item active">{{ 'GRAMMAR.Order' | translate }}</li>
+</ol>
+<h1>{{ 'GRAMMAR.Order' | translate }}</h1>
+<p>When using multiple adjectives to describe the same noun, we must put them in a certain order.</p>
+<p><strong>Quantity, Opinion, Size, Temperature, Age, Shape, Color, Origin, Material</strong></p>
+<div>
+  <table style="width: 90%; margin: 0 auto; border-style: solid; border-color: white; border-width: 1px; text-align: center;">
+    <thead style="padding-bottom: 5px;">
+      <tr>
+        <th style="font-weight: bold; text-align: center;">Type of Adjective</th>
+        <th style="font-weight: bold; text-align: center;">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Quantity</td>
+            <td>five, seventeen, many, few</td>
+        </tr>
+        <tr>
+            <td>Opinion</td>
+            <td>ugly, beautiful, delicious</td>
+        </tr>
+        <tr>
+            <td>Size</td>
+            <td>small, big, gigantic</td>
+        </tr>
+        <tr>
+            <td>Temperature</td>
+            <td>warm, cool, hot, cold</td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td>new, young, 21-year-old, old</td>
+        </tr>
+        <tr>
+            <td>Shape</td>
+            <td>round, rectangular, square</td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>red, orange, yellow, green, blue, indigo, violet</td>
+        </tr>
+        <tr>
+            <td>Origin</td>
+            <td>Canadian, Australian, British</td>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td>Carbon fiber, steel, wood</td>
+        </tr>
+    </tbody>
+</table>
+</div><br>
+<p>Examples:</p>
+<ul>
+    <li>I have <strong>five delicious red</strong> tomatoes growing in my garden.</li>
+    <li>She is making <strong>some really beautiful clay</strong> pottery.</li>
+    <li>He likes to buy bottles of <strong>aged brown Kentucky</strong> bourbon.</li>
+    <li>Someone drove by in a <strong>beautiful new red Italian</strong> sports car.</li>
+</ul>

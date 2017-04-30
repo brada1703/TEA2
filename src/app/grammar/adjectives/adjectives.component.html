@@ -1,0 +1,17 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a [routerLink]="'/' | localize">Home</a></li>
+  <li class="breadcrumb-item"><a [routerLink]="'/grammar' | localize">{{ 'NAVBAR.Grammar' | translate }}</a></li>
+  <li class="breadcrumb-item active">{{ 'GRAMMAR.Adjectives' | translate }}</li>
+</ol>
+<h1 style="padding-bottom: 10px;" class="text-center">{{ 'GRAMMAR.Adjectives' | translate }}</h1>
+<p><strong> {{ 'GRAMMAR.Adjectives' | translate }} </strong> are words used to describe nouns such as people, places, and things. They can describe feelings, quantities, nationality, characteristics, age, size, measurement, color, shape, and much more.</p>
+<div style="margin: auto;">
+  <ul>
+    <li><a [routerLink]="'/grammar/comparativesuperlative' | localize">{{ 'GRAMMAR.ComparativesSuperlatives' | translate }}</a></li>
+    <li><a [routerLink]="'/grammar/compareattributes' | localize">{{ 'GRAMMAR.CompareAttributes' | translate }}</a></li>
+    <li><a [routerLink]="'/grammar/equalquantities' | localize">{{ 'GRAMMAR.EqualQuantities' | translate }}</a></li>
+    <li><a [routerLink]="'/grammar/unequalquantities' | localize">{{ 'GRAMMAR.UnequalQuantities' | translate }}</a></li>
+    <li><a [routerLink]="'/grammar/placement' | localize">{{ 'GRAMMAR.Placement' | translate }}</a></li>
+    <li><a [routerLink]="'/grammar/order' | localize">{{ 'GRAMMAR.Order' | translate }}</a></li>
+  </ul>
+</div>
