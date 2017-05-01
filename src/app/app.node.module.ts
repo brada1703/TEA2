@@ -18,18 +18,10 @@ import { LocalizeRouterModule, LocalizeParser } from 'localize-router';
 import { Youtube } from '../pipes/youtube';
 
 import { GrammarModule } from './grammar/grammar.module';
-// import { PronunciationModule } from './pronunciation/pronunciation.module';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PronunciationComponent } from './pronunciation/pronunciation.component';
-    import { PronunciationDetailComponent } from './pronunciation/pronunciation-detail/pronunciation-detail.component';
-    import { PronunciationListComponent } from './pronunciation/pronunciation-list/pronunciation-list.component';
-    import { PronunciationItemComponent } from './pronunciation/pronunciation-list/pronunciation-item/pronunciation-item.component';
-import { GrammarComponent } from './grammar/grammar.component';
 
 let fs = require('fs');
 
@@ -68,9 +60,6 @@ export function localizeLoaderFactory(translate: TranslateService, location: Loc
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
-  { path: 'grammar', component: GrammarComponent },
-  { path: 'pronunciation', component: PronunciationComponent },
-  { path: 'not-found', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/not-found' }
 ];
 
@@ -80,12 +69,6 @@ const appRoutes: Routes = [
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    GrammarComponent,
-    PronunciationComponent,
-    PageNotFoundComponent,
-    PronunciationDetailComponent,
-    PronunciationListComponent,
-    PronunciationItemComponent,
     Youtube
   ],
   imports: [
@@ -108,7 +91,8 @@ const appRoutes: Routes = [
             deps: [TranslateService]
     }),
     FormsModule,
-    HttpModule
+    HttpModule,
+    GrammarModule
   ],
   exports: [
       RouterModule,

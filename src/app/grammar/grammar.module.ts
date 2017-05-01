@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { GrammarComponent } from './grammar.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { LocalizeRouterModule } from 'localize-router';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
 
 import { GrammarHomeComponent } from './grammar-home/grammar-home.component';
 import { NounsComponent } from './nouns/nouns.component';
@@ -95,8 +97,6 @@ import { PrepositionsComponent } from './prepositions/prepositions.component';
 
 
 let routes = [
- { path: '', component: GrammarComponent,
-      children: [
           { path: '', component: GrammarHomeComponent },
           { path: 'adjectives', component: AdjectivesComponent },
             { path: 'comparativesuperlative', component: ComparativesuperlativeComponent },
@@ -183,18 +183,19 @@ let routes = [
           { path: 'prepositions', component: PrepositionsComponent },
             { path: 'commonprepositions', component: CommonprepositionsComponent },
             { path: 'phrasalverbs', component: PhrasalverbsComponent },
-      ] },
 ];
 
 @NgModule({
   imports: [
     CommonModule,
     TranslateModule,
+    BsDropdownModule.forRoot(),
+    CollapseModule.forRoot(),
+    AccordionModule.forRoot(),
     LocalizeRouterModule.forChild(routes),
     RouterModule.forChild(routes)
   ],
   declarations: [
-        GrammarComponent,
         GrammarHomeComponent,
         NounsComponent,
         PluralComponent,
